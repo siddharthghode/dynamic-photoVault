@@ -1,0 +1,9 @@
+package com.photography.cms.repository;
+
+import com.photography.cms.entity.Service;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface ServiceRepository extends JpaRepository<Service, Long> {
+    List<Service> findAllByOrderByOrderAsc();
+}
